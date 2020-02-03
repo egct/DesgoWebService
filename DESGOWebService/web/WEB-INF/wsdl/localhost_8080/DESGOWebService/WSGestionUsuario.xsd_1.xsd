@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://servicios.desgo.com.ec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servicios.desgo.com.ec/">
+
+<xs:element name="Registrar" type="tns:Registrar"/>
+
+<xs:element name="RegistrarResponse" type="tns:RegistrarResponse"/>
+
+<xs:element name="Validar" type="tns:Validar"/>
+
+<xs:element name="ValidarResponse" type="tns:ValidarResponse"/>
+
+<xs:element name="login" type="tns:login"/>
+
+<xs:element name="loginResponse" type="tns:loginResponse"/>
+
+<xs:element name="registrarFormulario" type="tns:registrarFormulario"/>
+
+<xs:element name="registrarFormularioResponse" type="tns:registrarFormularioResponse"/>
+
+<xs:element name="registrarUser" type="tns:registrarUser"/>
+
+<xs:element name="registrarUserResponse" type="tns:registrarUserResponse"/>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="user">
+<xs:sequence>
+<xs:element name="CONTRASENIA_USUARIO" type="xs:string" minOccurs="0"/>
+<xs:element name="EMPRESA_USUARIO" type="xs:string" minOccurs="0"/>
+<xs:element name="ID_PERSONA" type="xs:int" minOccurs="0"/>
+<xs:element name="ID_TIPOUSUARIO" type="xs:int" minOccurs="0"/>
+<xs:element name="ID_USUARIO" type="xs:int" minOccurs="0"/>
+<xs:element name="persona" type="tns:persona" minOccurs="0"/>
+<xs:element name="SALT_USUARIO" type="xs:int" minOccurs="0"/>
+<xs:element name="tipoUsuario" type="tns:tipoUsuario" minOccurs="0"/>
+<xs:element name="USUARIO_USUARIO" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="CARGO_PERSONA" type="xs:string" minOccurs="0"/>
+<xs:element name="CEDULA_PERSONA" type="xs:string" minOccurs="0"/>
+<xs:element name="CORREO_PERSONA" type="xs:string" minOccurs="0"/>
+<xs:element name="FOTO_PERSONA" type="xs:string" minOccurs="0"/>
+<xs:element name="ID_PERSONA" type="xs:int" minOccurs="0"/>
+<xs:element name="PAPELLIDO_PERSONA" type="xs:string" minOccurs="0"/>
+<xs:element name="PNOMBRE_PERSONA" type="xs:string" minOccurs="0"/>
+<xs:element name="PROFESION_PERSONA" type="xs:string" minOccurs="0"/>
+<xs:element name="SAPELLIDO_PERSONA" type="xs:string" minOccurs="0"/>
+<xs:element name="SNOMBRE_PERSONA" type="xs:string" minOccurs="0"/>
+<xs:element name="TELEFONO_PERSONA" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoUsuario">
+<xs:sequence>
+<xs:element name="ID_TIPOUSUARIO" type="xs:int" minOccurs="0"/>
+<xs:element name="NIVEL_TIPOUSUARIO" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Validar">
+<xs:sequence>
+<xs:element name="dni" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="privilegio" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ValidarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:empleado" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empleado">
+<xs:sequence>
+<xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="contraseña" type="xs:string" minOccurs="0"/>
+<xs:element name="dni" type="xs:string" minOccurs="0"/>
+<xs:element name="nombres" type="xs:string" minOccurs="0"/>
+<xs:element name="privilegio" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarUser">
+<xs:sequence>
+<xs:element name="user" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Registrar">
+<xs:sequence>
+<xs:element name="dni" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="nombres" type="xs:string" minOccurs="0"/>
+<xs:element name="privilegio" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RegistrarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarFormulario">
+<xs:sequence>
+<xs:element name="form" type="tns:formulario" minOccurs="0"/>
+<xs:element name="user" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="formulario">
+<xs:sequence>
+<xs:element name="caracterizacionC_F" type="tns:caracterizacionCF" minOccurs="0"/>
+<xs:element name="caracterizacionL_F" type="tns:caracterizacionLF" minOccurs="0"/>
+<xs:element name="economica_F" type="tns:economicaF" minOccurs="0"/>
+<xs:element name="elementosC_F" type="tns:elementosCF" minOccurs="0"/>
+<xs:element name="graficosP_F" type="tns:graficosPF" minOccurs="0"/>
+<xs:element name="identificacionL_F" type="tns:identificacionLF" minOccurs="0"/>
+<xs:element name="identificacionU_F" type="tns:identificacionUF" minOccurs="0"/>
+<xs:element name="limites_F" type="tns:limitesF" minOccurs="0"/>
+<xs:element name="mapa_F" type="tns:mapaF" minOccurs="0"/>
+<xs:element name="mejora_F" type="tns:mejoraF" minOccurs="0"/>
+<xs:element name="responsables_F" type="tns:responsablesF" minOccurs="0"/>
+<xs:element name="vivienda_F" type="tns:viviendaF" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="caracterizacionCF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="caracterizacionLF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="economicaF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="elementosCF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="graficosPF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="identificacionLF">
+<xs:sequence>
+<xs:element name="FORMAADQUISICION" type="xs:string" minOccurs="0"/>
+<xs:element name="ID_COP_ILLOTE" type="xs:int" minOccurs="0"/>
+<xs:element name="ID_DIR_ILLOTE" type="xs:int" minOccurs="0"/>
+<xs:element name="ID_DOC_ILLOTE" type="xs:int" minOccurs="0"/>
+<xs:element name="ID_ILLOTE" type="xs:int" minOccurs="0"/>
+<xs:element name="ID_PRE_ILLOTE" type="xs:int" minOccurs="0"/>
+<xs:element name="ID_PRO" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="identificacionUF">
+<xs:sequence>
+<xs:element name="CLAVECATASTRALANTIGUO_IULOTE" type="xs:string" minOccurs="0"/>
+<xs:element name="CLAVECATASTRALNUEVO_IULOTE" type="xs:string" minOccurs="0"/>
+<xs:element name="ID_DDPLOTE" type="xs:int" minOccurs="0"/>
+<xs:element name="ID_IULOTE" type="xs:int" minOccurs="0"/>
+<xs:element name="NUMEROPREDIO_IULOTE" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="limitesF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="mapaF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="mejoraF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="responsablesF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="viviendaF">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="registrarFormularioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
