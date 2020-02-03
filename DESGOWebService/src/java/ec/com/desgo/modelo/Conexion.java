@@ -17,7 +17,7 @@ public class Conexion {
             /* Carga|Registra el driver JDBC */
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             /* Obtener la conexion */
-	    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/desgodb","root","");
+	    con = DriverManager.getConnection("jdbc:mysql://node51940-env-9874055.jl.serv.net.mx/:3306/desgodb","root","T8TpvMhSGY");
         }catch(SQLException ex){
         }catch(Exception e){   
         }

@@ -1,0 +1,244 @@
+/* ----- ----- ----- ----- */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  
+  }
+
+body {
+  font-size: 16px;
+  background: #333;
+  font-family: "Roboto"; 
+ justify-content: center;}
+
+a {
+  color: #ffffff;  }
+/*
+.wrap {
+    
+  width: 90%;
+  max-width: 1000px;
+  margin: auto; 
+  background: #0585C0;
+}
+*/
+.info {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  border-bottom: 1px solid #ccc; }
+  .info p {
+    margin-top: 20px; }
+
+.formulario { 
+
+}
+
+.form-fields li{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="date"],
+.form-fields input[type="number"],
+.form-fields input[type="email"],
+.form-fields textarea{
+    flex: 1 0 80%;
+    color:#ffffff;
+    float: left;
+    background: inherit;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    z-index: 0;    
+}
+.form-fields select{
+    flex: 0 0 60%;
+    color:#ffffff;
+    float: left;
+    background: inherit;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    z-index: 0;    
+}
+.form-fields label{
+    max-width: 30%;
+    float: left;  
+    flex: 1 0 20%;
+    z-index: 0;
+    
+}
+
+.formulario h2 {
+    font-size: 18px;
+    color: #fff;
+    float:left;
+    display: inline-table; 
+    }
+.formulario h5{
+    white-space: normal;
+    font-size: 14px;
+    color: #fff;
+    float:left;
+}  
+.formulario .gentab input{
+    color:#ffffff;
+    background: inherit;
+    text-align: center;
+    border: 0;
+    float: left;
+    font-size: 10px;
+    width:100%;
+    height: 20%;
+}
+.formulario .gentabl input{
+    
+    float: left;
+    color:#ffffff;
+    text-align: center;
+    background: inherit;
+    border: 0;
+    width:100%;
+    height: 70%;
+}
+.formulario .general label{
+    float: left;
+    padding-left: 20px;
+    white-space: pre;
+}
+.formulario .general input{
+    color:#ffffff;
+    background: inherit;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    
+}
+.form-fields select{
+  background-color:#333;
+  border: thin solid #333;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 14px;
+  width: 20%;
+  height: 10%;
+}
+
+.formulario .adquisicion select{
+  background-color:#333;
+  border: thin solid #333;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 14px;
+  width: 20%;
+  height: 10%;
+  
+ 
+  /* reset */
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.formulario .gensel select:hover{
+  background-color: #333;
+  color: white;
+  
+}
+
+  .formulario > div {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; 
+     justify-content: center;}
+  .formulario .radio label {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 0;
+    color: #fff;
+    position: relative;
+    padding: 5px 15px 5px 51px;
+    font-size: 12px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+   
+    .formulario .radio label:hover {
+      background: #aaa;
+     justify-content: center;}
+    
+    .formulario .radio label:before {
+      justify-content: center;
+      content: "";
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      z-index: -1;
+      left: 15px;
+      border-radius: 50%;
+      background: none;
+      border: 3px solid #aaa; }
+  
+  .formulario .radio label:before {
+    border-radius: 3px; 
+   justify-content: center;}
+  .formulario .radio input[type="radio"] {
+    display: none;
+     justify-content: center;}
+    .formulario .radio input[type="radio"]:checked + label:before {
+      display: none; 
+     justify-content: center;}
+    .formulario .radio input[type="radio"]:checked + label {
+      background: white;
+      color: black;
+      padding: 5px 15px;
+      z-index: 1;
+       justify-content: center;
+    }
+    
+
+/*# sourceMappingURL=estilos.css.map */
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  justify-content: center;
+  
+}
+th {
+  padding: 0px;
+  text-align: center;    
+}
+td {
+  padding: 0px;
+  text-align: center;    
+}
+/*dinamico*/
+.selected{
+        cursor: pointer;
+}
+.selected:hover{
+        background-color: #0585C0;
+        color: white;
+}
+.seleccionada{
+        background-color: #0585C0;
+        color: white;
+}
+.formulario .dinamico label{
+    border: solid 2px white; 
+    padding: 2px;
+    padding-left: 5px;
+    background: white;color:black;
+}
+
